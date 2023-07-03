@@ -26,8 +26,6 @@ generateBtn.addEventListener("click", function() {
     }
     
 
-
-
     const minCarr = 1
     const maxCarr = 8
     const randomCarr = Math.floor(Math.random() * (maxCarr - minCarr + 1)) + minCarr;
@@ -41,6 +39,23 @@ generateBtn.addEventListener("click", function() {
 
 }) 
 
+
+cancelBtn.addEventListener("click", function(){
+    tripKmInput.value=""
+    userNameInput.value=""
+    userAgeInput.value=""
+
+    const minCarr = 1
+    const maxCarr = 8
+    const randomCarr = Math.floor(Math.random() * (maxCarr - minCarr + 1)) + minCarr;
+    const randomCpCode = Math.floor(100000 + Math.random() * 900000)
+
+    document.getElementById("name-gen").innerHTML =""
+    document.getElementById("plan-gen").innerHTML =""
+    document.getElementById("carriage-gen").innerHTML =""
+    document.getElementById("cp-cod-gen").innerHTML =""
+    document.getElementById("price-gen").innerHTML =""
+})
 
 
 
