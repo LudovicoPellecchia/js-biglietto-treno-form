@@ -1,21 +1,37 @@
-/* const ticketkm = prompt ("Quanti chilometri vuoi percorrere?");
-const userage = prompt ("Quanti anni hai?"); */
+const userNameInput = document.getElementById("user-name");
+const tripKmInput = document.getElementById("trip-km");
+const userAgeInput = document.getElementById("user-age");
 
-let ticketprice = (parseInt(ticketkm) * 0.21);
-const under18discount = (ticketprice * 20) / 100;
-const over65discount = (ticketprice * 40) / 100;
-
-
-
-if (userage < "18")  {
-    ticketprice = ticketprice - under18discount;
-
-} else if (userage > "65") { 
-    ticketprice = ticketprice - over65discount;
-}
-else {
-    ticketprice = ticketprice
-}
+const generateBtn = document.querySelector(".generate-btn");
+const cancelBtn = document.querySelector(".cancel-btn");
 
 
-document.getElementById("output-price").innerHTML =`Il prezzo finale è di ${ticketprice.toFixed(2)} €`
+
+generateBtn.addEventListener("click", function() {
+    const userName = userNameInput.value;
+    const tripKm = tripKmInput.value;
+    const userAge = userAgeInput.value;
+    let ticketprice = (parseInt(tripKm) * 0.21);
+    const under18discount = (ticketprice * 20) / 100;
+    const over65discount = (ticketprice * 40) / 100;
+
+    if (userAge < "18")  {
+        ticketprice = ticketprice - under18discount;
+    
+    } else if (userAge > "65") { 
+        ticketprice = ticketprice - over65discount;
+    }
+    else {
+        ticketprice = ticketprice
+    }
+    
+    const ticketName = document.querySelector(".ticket-name")
+    ticketName.innerHTML += `<strong>${userName}</strong>`
+
+
+    document.getElementById("output-price").innerHTML =`Il prezzo finale è di ${ticketprice.toFixed(2)} €`
+}) 
+
+
+
+

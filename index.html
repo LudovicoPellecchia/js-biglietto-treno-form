@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <h1 class="text-center mb-4">Ticket train price calculator</h1>
+            <h2 class="text-center mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
@@ -23,7 +23,7 @@
                             <div class="col-3">
                                 <div class="mb-3">
                                     <label for="user-name" class="form-label text-center w-100 pb-3">Nome Cognome</label>
-                                    <input type="text" class="form-control" id="user-name"placeholder="Nome e Cognome">
+                                    <input type="text" class="form-control user-namess" id="user-name" placeholder="Nome e Cognome">
                                 </div>
                             </div>
                             <div class="col-3">
@@ -40,22 +40,49 @@
                             </div>
                             <div class="row text-center">
                                 <div class="col-12 gy-4">
-                                    <button type="button" class="btn btn-primary">Genera</button>
-                                    <button type="button" class="btn btn-primary">Annulla</button>
+                                    <button type="button" class="btn btn-primary generate-btn">Genera</button>
+                                    <button type="button" class="btn btn-primary cancel-btn">Annulla</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-12">
+                <h2>IL TUO BIGLIETTO</h2>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>DETTAGLIO PASSEGGERI
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="ticket-name">
+                                    <h5>NOME PASSEGGERO </h5>
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <p id="output-price"></p>
         </div>
+
 
 
     </div>
 
 
 
-    <script src="js/javascript.js"></script>
+    <script src="./js/javascript.js"></script>
 </body>
 
 </html>
