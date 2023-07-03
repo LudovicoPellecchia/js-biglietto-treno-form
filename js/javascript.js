@@ -25,11 +25,20 @@ generateBtn.addEventListener("click", function() {
         ticketprice = ticketprice
     }
     
-    const ticketName = document.querySelector(".ticket-name")
-    ticketName.innerHTML += `<strong>${userName}</strong>`
 
 
-    document.getElementById("output-price").innerHTML =`Il prezzo finale è di ${ticketprice.toFixed(2)} €`
+
+    const minCarr = 1
+    const maxCarr = 8
+    const randomCarr = Math.floor(Math.random() * (maxCarr - minCarr + 1)) + minCarr;
+    const randomCpCode = Math.floor(100000 + Math.random() * 900000)
+
+    document.getElementById("name-gen").innerHTML =`<strong>${userName}</strong>`
+    document.getElementById("plan-gen").innerHTML =`Biglietto Standard`
+    document.getElementById("carriage-gen").innerHTML =`${randomCarr}`
+    document.getElementById("cp-cod-gen").innerHTML =`${randomCpCode}`
+    document.getElementById("price-gen").innerHTML =`${ticketprice.toFixed(2)} €`
+
 }) 
 
 

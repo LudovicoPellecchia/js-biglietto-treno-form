@@ -14,10 +14,10 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <h2 class="text-center mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <div class="row gy-3">
             <div class="col-12">
-                <div class="card">
+                <h2 class="text-center mb-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+                <div class="card mb-3">
                     <div class="card-body">
                         <div class="row justify-content-center">
                             <div class="col-3">
@@ -53,7 +53,7 @@
             </div>
 
             <div class="col-12">
-                <h2>IL TUO BIGLIETTO</h2>
+                <h2 class="text-center mb-3">IL TUO BIGLIETTO</h2>
                 <div class="card">
                     <div class="card-header">
                         <h4>DETTAGLIO PASSEGGERI
@@ -62,12 +62,25 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h5 class="ticket-name">NOME PASSEGGERO </h5>
+                                <h6 class="ticket-name mb-5">NOME PASSEGGERO </h6>
+                                <div id="name-gen"></div>
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                            <div class="col">
+                                <h6 class="ticket-plan mb-5">Offerta</h6>
+                                <div id="plan-gen"></div>
+                            </div>
+                            <div class="col">
+                                <h6 class="ticket-carriage-nmb mb-5">Carrozza</h6>
+                                <div id="carriage-gen"></div>
+                            </div>
+                            <div class="col">
+                                <h6 class="ticket-cp-code mb-5"> Codice CP</h6>
+                                <div id="cp-cod-gen"></div>
+                            </div>
+                            <div class="col">
+                                <h6 class="ticket-price mb-5">Costo Biglietto</h6>
+                                <div id="price-gen"></div>
+                            </div>
                         </div>
 
                     </div>
